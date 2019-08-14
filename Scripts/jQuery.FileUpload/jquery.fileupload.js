@@ -122,7 +122,7 @@
             // Multipart file uploads add a number of bytes to each uploaded file,
             // therefore the following option adds an overhead for each file used
             // in the limitMultiFileUploadSize configuration:
-            limitMultiFileUploadSizeOverhead: 512,
+            limitMultiFileUploadSizeOverhead: 182000, //512,
             // Set the following option to true to issue all file upload requests
             // in a sequential order:
             sequentialUploads: false,
@@ -148,13 +148,13 @@
             // to a preferred maximum chunk size. If set to 0, null or undefined,
             // or the browser does not support the required Blob API, files will
             // be uploaded as a whole.
-            maxChunkSize: undefined,
+            maxChunkSize: 1000000000, // 10 MB, undefined,
             // When a non-multipart upload or a chunked multipart upload has been
             // aborted, this option can be used to resume the upload by setting
             // it to the size of the already uploaded bytes. This option is most
             // useful when modifying the options object inside of the "add" or
             // "send" callbacks, as the options are cloned for each file upload.
-            uploadedBytes: undefined,
+            uploadedBytes:  undefined,
             // By default, failed (abort or error) file uploads are removed from the
             // global progress calculation. Set the following option to false to
             // prevent recalculating the global progress data:

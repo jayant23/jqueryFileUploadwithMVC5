@@ -4439,7 +4439,8 @@ jQuery.event = {
 							event.preventDefault();
 							event.stopPropagation();
 						}
-					}
+                    }
+
 				}
 			}
 		}
@@ -4447,7 +4448,8 @@ jQuery.event = {
 		// Call the postDispatch hook for the mapped type
 		if ( special.postDispatch ) {
 			special.postDispatch.call( this, event );
-		}
+        }
+
 
 		return event.result;
 	},
